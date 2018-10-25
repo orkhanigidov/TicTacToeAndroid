@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         winner();
     }
 
-    public void checkHorizontal() {
+    public void checkHorizontalLine() {
         if (a1.getText().equals(a2.getText()) && a2.getText().equals(a3.getText()) && !a1.isClickable()) {
             win = true;
         }
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void checkVertical() {
+    public void checkVerticalLine() {
         if (a1.getText().equals(b1.getText()) && b1.getText().equals(c1.getText()) && !a1.isClickable()) {
             win = true;
         }
@@ -84,8 +84,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     public void winner() {
-        checkHorizontal();
-        checkVertical();
+        checkHorizontalLine();
+        checkVerticalLine();
         checkDiagonal();
 
         if (win) {
