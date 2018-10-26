@@ -7,7 +7,7 @@ import android.view.View;
 
 public class Launcher extends Activity{
 
-    public static int player;
+    public static int player1;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,13 +15,13 @@ public class Launcher extends Activity{
     }
 
     public void chooseX(View view) {
-        player = 1;
+        player1 = 1;
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
     public void chooseO(View view) {
-        player = 2;
+        player1 = 2;
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

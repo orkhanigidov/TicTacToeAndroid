@@ -36,14 +36,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void buttonPlayer(Button button) {
-        if (launcher.player == 1) {
+        if (launcher.player1 == 1) {
             button.setText("X");
-            launcher.player = 2;
+            launcher.player1 = 2;
             button.setClickable(false);
         }
         else {
             button.setText("O");
-            launcher.player = 1;
+            launcher.player1 = 1;
             button.setClickable(false);
         }
         winner();
@@ -89,10 +89,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         checkDiagonal();
 
         if (win) {
-            if (launcher.player == 2) {
+            if (launcher.player1 == 2) {
                 Toast.makeText(getApplicationContext(), "WINNER IS : X", Toast.LENGTH_LONG).show();
             }
-            else if (launcher.player == 1) {
+            else if (launcher.player1 == 1) {
                 Toast.makeText(getApplicationContext(), "WINNER IS : O", Toast.LENGTH_LONG).show();
             }
             disable();
